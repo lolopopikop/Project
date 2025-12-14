@@ -1,10 +1,14 @@
 import './App.css';
+import Header from "./components/Header/Header.jsx";
 import ProductsCatalog from './components/ProductsCatalog/ProductsCatalog';
 
 function App() {
     return (
         <div className="App">
-            <ProductsCatalog />
+            <Header />
+            <div className="main-content">
+                <ProductsCatalog />
+            </div>
         </div>
     );
 }
