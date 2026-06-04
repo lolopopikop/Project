@@ -1,0 +1,10 @@
+Options -MultiViews
+RewriteEngine On
+RewriteBase /project/
+
+# API запросы -> PHP бэкенд
+RewriteRule ^api/(.*)$ backend/index.php?q=api/$1 [QSA,L]
+
+# React Router
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ index.html [QSA,L]
